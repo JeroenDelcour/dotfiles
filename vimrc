@@ -1,14 +1,42 @@
-" Heavily inspired by (i.e. pretty much straight copied from)
-" Max Cantor's talk (https://www.youtube.com/watch?v=XA2WjJbmmoM)
-" https://github.com/mcantor/no_plugins
+execute pathogen#infect()
 
 " Don't pretend to be Vi
 set nocompatible
 
 " enable syntax highlighting and plugins (for netrw)
 syntax on
-filetype plugin on
+filetype plugin indent on
 
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+" Colorscheme
+set t_Co=256
+colorscheme badwolf
+
+" When entering Goyo, change colorscheme and remove tmux bar
+function! s:goyo_enter()
+    colorscheme pencil
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+endfunction
+
+function! s:goyo_leave()
+    colorscheme badwolf
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" Heavily inspired by (i.e. pretty much straight copied from)
+" Max Cantor's talk (https://www.youtube.com/watch?v=XA2WjJbmmoM)
+" https://github.com/mcantor/no_plugins
 
 " FINDING FILES
 " -------------
