@@ -28,6 +28,13 @@ augroup pencil
   autocmd FileType text         call pencil#init()
 augroup END
 
+" Sets me up for writing with Markdown
+autocmd Filetype markdown call SetUpMk()
+function SetUpMk()
+   colorscheme pencil
+   Goyo
+endfunction    
+
 " When entering Goyo, change colorscheme and remove tmux bar
 function! s:goyo_enter()
     colorscheme pencil
