@@ -16,7 +16,17 @@ set expandtab
 
 " Colorscheme
 set t_Co=256
-colorscheme badwolf
+colorscheme default
+
+" Minimal number of screen lines to keep above and below the cursor.
+set scrolloff=1
+
+" Start in pencil mode when opening text or markdown files
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
 
 " When entering Goyo, change colorscheme and remove tmux bar
 function! s:goyo_enter()
@@ -26,7 +36,7 @@ function! s:goyo_enter()
 endfunction
 
 function! s:goyo_leave()
-    colorscheme badwolf
+    colorscheme default
     silent !tmux set status on
     silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
 endfunction
