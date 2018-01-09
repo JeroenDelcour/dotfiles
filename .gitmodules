@@ -7,9 +7,6 @@
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule "vim/bundle/vim-table-mode"]
-	path = vim/bundle/vim-table-mode
-	url = https://github.com/dhruvasagar/vim-table-mode
 [submodule "vim/bundle/badwolf"]
 	path = vim/bundle/badwolf
 	url = https://github.com/sjl/badwolf
@@ -19,6 +16,15 @@
 [submodule "vim/bundle/vim-bracketed-paste"]
 	path = vim/bundle/vim-bracketed-paste
 	url = https://github.com/ConradIrwin/vim-bracketed-paste
-[submodule "vim/bundle/vim-pencil"]
-	path = vim/bundle/vim-pencil
-	url = https://github.com/reedes/vim-pencil
+[submodule "vim/bundle/vim-monokai"]
+	path = vim/bundle/vim-monokai
+	url = https://github.com/sickill/vim-monokai
+[submodule "vim/bundle/vim-pandoc"]
+	path = vim/bundle/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc
+[submodule "vim/bundle/vim-pandoc-syntax"]
+	path = vim/bundle/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized

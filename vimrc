@@ -15,41 +15,40 @@ set shiftwidth=4
 set expandtab
 
 " Colorscheme
-set t_Co=256
-colorscheme default
+"set t_Co=256
+set background=dark
+colorscheme solarized
 
 " Minimal number of screen lines to keep above and below the cursor.
 set scrolloff=1
 
-" Start in pencil mode when opening text or markdown files
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
-  autocmd FileType text         call pencil#init()
-augroup END
+" Open files with all folds open by default
+set nofoldenable
 
-" Sets me up for writing with Markdown
-autocmd Filetype markdown call SetUpMk()
-function SetUpMk()
-   colorscheme pencil
-   Goyo
-endfunction    
+" Open Markdown files with a light colorscheme
+autocmd BufEnter *.md set background=light
 
-" When entering Goyo, change colorscheme and remove tmux bar
+" When entering Goyo, hide tmux bar
 function! s:goyo_enter()
-    colorscheme pencil
     silent !tmux set status off
     silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
 endfunction
 
 function! s:goyo_leave()
-    colorscheme default
     silent !tmux set status on
     silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" vim-pandoc/vim-pandoc-syntax settings
+" -------------------------------------
+let g:pandoc#spell#enabled=0       " Disable spellcheck
+let g:pandoc#syntax#conceal#urls=1 " Conceal URLs
+let g:pandoc#folding#fdc=0         " Disable foldcolumn
+" Enable syntax highlighting in code blocks
+let g:pandoc#syntax#codeblocks#embeds#langs = ["bash=sh", "python"]
 
 " Heavily inspired by (i.e. pretty much straight copied from)
 " Max Cantor's talk (https://www.youtube.com/watch?v=XA2WjJbmmoM)
