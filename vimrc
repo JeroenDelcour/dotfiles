@@ -19,6 +19,10 @@ set expandtab
 set background=dark
 colorscheme solarized
 
+" Disable powerline seperators,
+" since these require extra fonts
+let g:tmuxline_powerline_separators = 0
+
 " Minimal number of screen lines to keep above and below the cursor.
 set scrolloff=1
 
