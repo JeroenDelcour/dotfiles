@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # set up symlinks
 ln -s ~/dotfiles/vimrc ~/.vimrc
