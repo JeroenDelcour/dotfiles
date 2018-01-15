@@ -7,6 +7,9 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
+" Enable global clipboard
+set clipboard=unnamed
+
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
