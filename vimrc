@@ -19,6 +19,9 @@ set expandtab
 set background=dark
 colorscheme solarized
 
+" Show line numbers
+set number
+
 " Disable powerline seperators,
 " since these require extra fonts
 let g:tmuxline_powerline_separators = 0

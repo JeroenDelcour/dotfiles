@@ -40,3 +40,6 @@
 [submodule "vim/bundle/tmuxline.vim"]
 	path = vim/bundle/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim
+[submodule "vim/bundle/mkdx"]
+	path = vim/bundle/mkdx
+	url = https://github.com/SidOfc/mkdx
