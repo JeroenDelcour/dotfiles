@@ -28,6 +28,7 @@ set number
 " Disable powerline seperators,
 " since these require extra fonts
 let g:tmuxline_powerline_separators = 0
+let g:tmuxline_preset = 'minimal' 
 
 " Minimal number of screen lines to keep above and below the cursor.
 set scrolloff=1
