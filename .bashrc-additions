@@ -11,3 +11,8 @@ PS4='+ $LINENO: '
 
 # trim bash prompt in deep directory structures
 PROMPT_DIRTRIM=1
+
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
