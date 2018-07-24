@@ -1,0 +1,21 @@
+# Simple prompt
+# If we are connected remotely, `@<hostname>:` shows first
+build_ps1() {
+    local host=''
+    [[ $SSH_TTY ]] && host="@$HOSTNAME:"
+    echo "\[\e[01;32m\]${host}\w \[\e[31m\]$\[\e[0m\] "
+}
+PS1=$(build_ps1)
+PS2='\\ '
+PS4='+ $LINENO: '
+
+# trim bash prompt in deep directory structures
+PROMPT_DIRTRIM=1
+
+# virtualenvwrapper
+# assumes it was installed using `python3 -m pip install virtualenvwrapper`
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
+source ~/.local/bin/virtualenvwrapper.sh
