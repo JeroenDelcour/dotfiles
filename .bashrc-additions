@@ -13,6 +13,9 @@ PS4='+ $LINENO: '
 PROMPT_DIRTRIM=1
 
 # virtualenvwrapper
+# assumes it was installed using `pip3 install virtualenvwrapper`
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
+source ~/.local/bin/virtualenvwrapper.sh
