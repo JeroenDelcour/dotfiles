@@ -8,7 +8,7 @@ syntax on
 filetype plugin indent on
 
 " Enable global clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " show existing tab with 4 spaces width
 set tabstop=4
