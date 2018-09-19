@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/zekko/dotfiles/tmux'
+let g:netrw_dirhist_2='/home/jeroen/Dropbox/notes/asfalt'
+let g:netrw_dirhist_3='/home/jeroen/Documents/projects/BAM_Telecom_grond/utils/Object_Detection/geo'
+let g:netrw_dirhist_4='/home/jeroen/Dropbox/notes/asfalt'
+let g:netrw_dirhist_5='/home/jeroen/Dropbox/notes'
