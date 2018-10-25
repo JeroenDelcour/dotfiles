@@ -43,3 +43,6 @@
 [submodule "vim/bundle/mkdx"]
 	path = vim/bundle/mkdx
 	url = https://github.com/SidOfc/mkdx
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
