@@ -7,7 +7,4 @@ ln -sT ~/dotfiles/vim ~/.vim
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/tmux ~/.tmux
 
-cd ~/dotfiles/vim/bundle/YouCompleteMe
-python3 install.py
-
-echo "Setup completed."
+echo "Done."
