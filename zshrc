@@ -110,3 +110,8 @@ source ~/.local/bin/virtualenvwrapper.sh
 
 # powerline
 . /usr/share/powerline/bindings/zsh/powerline.zsh
+#
+# automatically attach to tmux session if logging in through ssh
+if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+    tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi

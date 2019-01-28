@@ -19,8 +19,5 @@ apt install powerline fonts-powerline -y
 
 # setup virtualenvwrapper
 pip3 install virtualenvwrapper
-# stuff to show activate env in zsh
-cp virtualenvs/postactivate ~/.virtualenvs/postactivate
-cp virtualenvs/postdeactivate ~/.virtualenvs/postdeactivate
 
 echo "Setup completed."
