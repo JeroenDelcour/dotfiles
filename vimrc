@@ -18,17 +18,12 @@ set shiftwidth=4
 set expandtab
 
 " Colorscheme
-"set t_Co=256
+set t_Co=256
 set background=dark
 colorscheme solarized
 
 " Show line numbers
 set number
-
-" Disable powerline seperators,
-" since these require extra fonts
-let g:tmuxline_powerline_separators = 0
-let g:tmuxline_preset = 'minimal' 
 
 " Minimal number of screen lines to keep above and below the cursor.
 set scrolloff=1
@@ -106,3 +101,17 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " NOT INCLUDED
 " ------------
 " Tag jumping: e.g. jump to class definition
+
+" powerline
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+set laststatus=2 " Always display the statusline in all windows
+"set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+
+" reduce delay when pressing ESC
+set timeout
+set ttimeout
+set timeoutlen=3000
+set ttimeoutlen=50
