@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASEDIR=$(dirname $0)
+BASEDIR=$(dirname $(realpath -s $0))
 
 # set up symlinks
 ln -s ${BASEDIR}/vimrc ~/.vimrc
@@ -12,7 +12,8 @@ ln -s ${BASEDIR}/tmux ~/.tmux
 apt install zsh -y
 chsh -s `which zsh` # set zsh as default shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # install oh-my-zsh
-rm -v ~/.zshrc && ln -vs "${BASEDIR}/zshrc" ~/.zshrc
+rm -v ~/.zshrc
+ln -vs "${BASEDIR}/zshrc" ~/.zshrc
 
 # setup powerline
 apt install powerline fonts-powerline -y
