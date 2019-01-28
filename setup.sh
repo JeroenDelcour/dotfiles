@@ -7,19 +7,18 @@ ln -s ${BASEDIR}/vimrc ~/.vimrc
 ln -sT ${BASEDIR}/vim ~/.vim
 ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
 ln -s ${BASEDIR}/tmux ~/.tmux
-ln -s ${BASEDIR}/zshrc ~/.zshrc
-ln -s ${BASEDIR}/oh-my-zsh ~/.oh-my-zsh
 
 # install zsh and oh-my-zsh
-apt install zsh
+apt install zsh -y
 chsh -s `which zsh` # set zsh as default shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # install oh-my-zsh
+rm -v ~/.zshrc && ln -vs "${BASEDIR}/zshrc" ~/.zshrc
 
 # setup powerline
-apt install powerline fonts-powerline
+apt install powerline fonts-powerline -y
 
 # setup virtualenvwrapper
-pip3 install virtualenvwrapper -y
+pip3 install virtualenvwrapper
 # stuff to show activate env in zsh
 cp virtualenvs/postactivate ~/.virtualenvs/postactivate
 cp virtualenvs/postdeactivate ~/.virtualenvs/postdeactivate
