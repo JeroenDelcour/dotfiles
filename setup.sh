@@ -7,6 +7,7 @@ ln -s ${BASEDIR}/vimrc ~/.vimrc
 ln -sT ${BASEDIR}/vim ~/.vim
 ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
 ln -s ${BASEDIR}/tmux ~/.tmux
+ln -s ${BASEDIR}/emacs.d ~/.emacs.d
 
 # install zsh and oh-my-zsh
 apt install zsh -y
