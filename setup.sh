@@ -10,6 +10,7 @@ ln -s ${BASEDIR}/tmux ~/.tmux
 ln -s ${BASEDIR}/emacs.d ~/.emacs.d
 
 # install zsh and oh-my-zsh
+apt update
 apt install zsh -y
 chsh -s `which zsh` # set zsh as default shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # install oh-my-zsh
@@ -18,8 +19,5 @@ ln -vs "${BASEDIR}/zshrc" ~/.zshrc
 
 # setup powerline
 apt install powerline fonts-powerline -y
-
-# setup virtualenvwrapper
-pip3 install virtualenvwrapper
 
 echo "Setup completed."
