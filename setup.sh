@@ -11,11 +11,11 @@ ln -s ${BASEDIR}/emacs.d ~/.emacs.d
 
 sudo apt update
 # install python virtualenvwrapper
-apt install python3-pip
+sudo apt install python3-pip
 python3 -m pip install virtualenvwrapper
 
 # install zsh and oh-my-zsh
-sudo apt install zsh -y
+sudo apt install zsh curl tmux -y
 chsh -s `which zsh` # set zsh as default shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # install oh-my-zsh
 rm -v ~/.zshrc
