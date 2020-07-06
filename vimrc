@@ -54,7 +54,7 @@ let g:pandoc#spell#enabled=0       " Disable spellcheck
 let g:pandoc#syntax#conceal#urls=1 " Conceal URLs
 let g:pandoc#folding#fdc=0         " Disable foldcolumn
 " Enable syntax highlighting in code blocks
-let g:pandoc#syntax#codeblocks#embeds#langs = ["bash=sh", "python"]
+let g:pandoc#syntax#codeblocks#embeds#langs = ["bash=sh"]
 
 " Heavily inspired by (i.e. pretty much straight copied from)
 " Max Cantor's talk (https://www.youtube.com/watch?v=XA2WjJbmmoM)
@@ -103,7 +103,7 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " Tag jumping: e.g. jump to class definition
 
 " powerline
-let g:powerline_pycmd = 'py3'
+" let g:powerline_pycmd = 'py3'
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup

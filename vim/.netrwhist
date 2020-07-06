@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/zekko/dotfiles/tmux'
-let g:netrw_dirhist_2='/home/jeroen/Dropbox/notes/asfalt'
-let g:netrw_dirhist_3='/home/jeroen/Documents/projects/BAM_Telecom_grond/utils/Object_Detection/geo'
-let g:netrw_dirhist_4='/home/jeroen/Dropbox/notes/asfalt'
-let g:netrw_dirhist_5='/home/jeroen/Dropbox/notes'
-let g:netrw_dirhist_6='/home/jeroen/dotfiles/vim/bundle'
-let g:netrw_dirhist_7='/home/jeroen/projects/BAM_Telecom_grond/data/DenHaag/panoramas_seg_masks_predicted_visualizations'
-let g:netrw_dirhist_8='/home/jeroen/projects/BAM_Telecom_grond/data/DenHaag'
-let g:netrw_dirhist_9='/home/jeroen/.ssh'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/jeroen/dotfiles/emacs.d/emacs.d'
