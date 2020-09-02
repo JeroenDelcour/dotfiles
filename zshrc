@@ -96,9 +96,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -alF"
 alias c="clear"
-alias goodmorning=""
-alias todo="vim ~/Dropbox/notes/todo.md"
-alias goodmorning="tmux new-session -c ~/projects 'vim ~/Dropbox/notes/todo.md'"
 
 # virtualenvwrapper
 # assumes it was installed using `pip3 install virtualenvwrapper`
