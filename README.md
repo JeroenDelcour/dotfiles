@@ -1,6 +1,6 @@
 # Personal dotfiles
 
-## Normal (bash) version
+## Normal (zsh) version (requires sudo)
 
 ```
 git clone --recursive https://github.com/jeroendelcour/dotfiles.git ~/dotfiles
@@ -11,13 +11,6 @@ bash ~/dotfiles/setup.sh
 
 ```
 git clone -b lightweight --single-branch --recursive https://github.com/jeroendelcour/dotfiles.git ~/dotfiles
-bash ~/dotfiles/setup.sh
-```
-
-## zsh & powerline version (requires sudo)
-
-```
-git clone -b zsh --single-branch --recursive https://github.com/jeroendelcour/dotfiles.git ~/dotfiles
 bash ~/dotfiles/setup.sh
 ```
 
