@@ -9,11 +9,6 @@ ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
 ln -s ${BASEDIR}/tmux ~/.tmux
 ln -s ${BASEDIR}/emacs.d ~/.emacs.d
 
-sudo apt update
-# install python virtualenvwrapper
-sudo apt install python3-pip
-python3 -m pip install virtualenvwrapper
-
 # install zsh and oh-my-zsh
 sudo apt install zsh curl tmux -y
 chsh -s `which zsh` # set zsh as default shell
@@ -23,5 +18,8 @@ ln -vs "${BASEDIR}/zshrc" ~/.zshrc
 
 # setup powerline
 sudo apt install powerline fonts-powerline -y
+
+# install pyenv
+curl https://pyenv.run | bash
 
 echo "Setup completed."

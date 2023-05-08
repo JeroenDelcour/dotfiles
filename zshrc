@@ -97,18 +97,16 @@ source $ZSH/oh-my-zsh.sh
 alias ll="ls -alF"
 alias c="clear"
 
-# virtualenvwrapper
-# assumes it was installed using `pip3 install virtualenvwrapper`
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
-source ~/.local/bin/virtualenvwrapper.sh
-
 # powerline
 . /usr/share/powerline/bindings/zsh/powerline.zsh
-#
+
 # automatically attach to tmux session if logging in through ssh
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
     tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
 fi
+
+# pyenv settings
+export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
